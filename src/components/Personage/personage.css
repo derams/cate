@@ -11,10 +11,12 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  color: white;
 }
 .personage_top>h3{
   margin: 0;
   text-align: center;
+  color: white;
 }
 .personage_img{
   display: flex;
@@ -31,14 +33,18 @@
   justify-content: center;
   flex-direction: column;
   margin-left: 30px;
+  position: relative;
 }
 .signtrue>p{
   margin: 0;
   padding-bottom: 5px;
 }
-.Personage_input{
+.personage_input{
   border:0;
   background-color: inherit;
+  color:white;
+  outline:0;
+  width: 80%;
 }
 .personage_top>a>img{
   display: block;
@@ -73,11 +79,34 @@
   justify-content: center;
 }
 .friend>p>span{
-  width: 40px;
+  width: 60px;
 }
 .friend>p>img{
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  padding-right: 15%;
+  padding-right: 10%;
+}
+.personage_img .head>input{
+    width: 0;
+    height: 0;
+}
+.personage_img .head{
+  background-image: url('../images/u=2972809576,3457284332&fm=27&gp=0.jpg');
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.signtrue .personage_active{
+  border-bottom: 1px solid #ccc;
+}
+.personage_save{
+  position:absolute;
+  top:40px;
+  left:135px;
+  color:black;
+  display: none;
+}
+.signtrue .personage_btn{
+  display: block;
 }
