@@ -9,15 +9,10 @@ class Main extends Component {
   render(){
     return(
       <div className="main">
-
         <Route path="/" exact component={Home}/>
         <Route path="/personage" component={Personage}/>
-      <Route path="/login" component={Login}/>
-    <Route path="/signup" component={Signup}/>
-        {/* <Route path="/" component={Home}/>
-        <Route path="/" component={Home}/>
-        <Route path="/" component={Home}/>
-        <Route path="/" component={Home}/> */}
+        <Route path="/login" component={Login}/>
+        <Route path="/signup" component={Signup}/>
       </div>
     )
   }

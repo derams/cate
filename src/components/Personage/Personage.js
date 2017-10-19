@@ -4,11 +4,14 @@ import img1 from '../images/u=2972809576,3457284332&fm=27&gp=0.jpg'
 import Pen from '../svg/pen.svg'
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
+import Side from '../Sidebar/Side.js'
+import More from '../More/More.js'
 
 class Personage extends Component {
   state = {
     val:'',
     show:false,
+    sideShow:false,
     posts:[
       {
         img:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2423297108,1993881559&fm=27&gp=0.jpg',
@@ -38,6 +41,12 @@ class Personage extends Component {
       val:this.state.val
     })
   }
+  handleShow2 = () => {
+    console.log(1);
+    this.setState({
+      sideShow:true
+    })
+  }
   render(){
     const post = this.state.posts.map(t=>(
       <div className="friend" key={t.id}>
@@ -54,6 +63,8 @@ class Personage extends Component {
     ))
     return(
       <div className="personage">
+        <More width='20' heigth='20' handleShow2={this.handleShow2}/>
+      <Side sideShow={this.state.sideShow}/>
         <div className="personage_top">
           <h3>个人中心</h3>
           <div className="personage_img">
