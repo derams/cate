@@ -41,6 +41,11 @@ class Personage extends Component {
       val:this.state.val
     })
   }
+  close = () => {
+    this.setState({
+      sideShow:false
+    })
+  }
   handleShow2 = () => {
     console.log(1);
     this.setState({
@@ -64,7 +69,8 @@ class Personage extends Component {
     return(
       <div className="personage">
         <More width='20' heigth='20' handleShow2={this.handleShow2}/>
-      <Side sideShow={this.state.sideShow}/>
+      <Side sideShow={this.state.sideShow}
+      close={this.close}/>
         <div className="personage_top">
           <h3>个人中心</h3>
           <div className="personage_img">
@@ -77,7 +83,6 @@ class Personage extends Component {
           placeholder="个性签名"/>
         <a className={`personage_save ${this.state.show&&'personage_btn'}`} onClick={this.handleSave
         }>保存</a>
-
           </div>
           </div>
           <a href="javascript:;" onClick={this.handlePen}><img src={Pen} alt=""/></a>

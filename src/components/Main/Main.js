@@ -4,6 +4,7 @@ import Personage from '../Personage/Personage.js'
 import Home from '../Home/Home.js'
 import Login from '../Login/Login.js'
 import Signup from '../Signup/Signup.js'
+import Fond from '../Fond/Fond.js'
 
 class Main extends Component {
   render(){
@@ -13,6 +14,7 @@ class Main extends Component {
         <Route path="/personage" component={Personage}/>
         <Route path="/login" component={Login}/>
         <Route path="/signup" component={Signup}/>
+        <Route path="/fond" component={Fond}/>
       </div>
     )
   }
